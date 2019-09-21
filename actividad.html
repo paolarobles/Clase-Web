@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jquery class</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+   <div id="titulo">
+       <h1 id="2">Introducción a JQUERY</h1>
+   </div> 
+
+   <div id="foto">
+       <img id="image" src="https://engorda.org/wp-content/uploads/2018/01/uvas.jpg" alt="uvas">
+
+   </div>
+
+   <div id="parrafo">
+       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias omnis facilis qui ut, 
+           ipsum ratione iste aperiam, eaque fugit quam fuga! Similique dignissimos autem hic vel et modi,
+           quaerat blanditiis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum reiciendis corrupti
+           asperiores impedit hic, aperiam beatae itaque assumenda accusantium aliquid adipisci officia molestiae,
+           voluptas ut? Quis inventore nisi consequuntur quod?</p>
+       
+       
+   </div>
+
+   <button id="boton" onclick="HideCallBack()">Picame</button>
+
+
+
+<script>
+function HideCallBack()
+{
+    $(document).ready(function()
+    {
+        $("#boton").fadeToggle(2000, function()
+            {
+            $("#parrafo").slideToggle(2000, function()
+                {
+                    
+                    $("#foto").slideToggle(2000, function()
+                    {
+                       $("#titulo").fadeToggle(2000, function()
+                       {
+                        ChangeTitle()
+                        ChangeImage();
+                        ChangeText()
+                        $("#titulo").fadeToggle(2000, function()
+                        {
+                            
+                            $("#foto").slideToggle(2000, function()
+                            {
+                               
+                                $("#parrafo").slideToggle(2000, function()
+                                {
+                                    $("#boton").fadeToggle(2000) 
+                                }) 
+                            }); 
+                        });
+                       }); 
+                        
+                    });
+                    
+                });
+            });
+    })
+}
+
+function ChangeImage()
+{
+    $(document).ready(function()
+    {
+        document.getElementById("image").src="https://www.elbotiquin.mx/sites/default/files/styles/corte_1/public/2018/11/26/uva.jpg?itok=KNO4NhFe";
+    })
+
+}
+
+function ChangeText()
+{
+    $(document).ready(function()
+    {
+        document.getElementById("parrafo"). innerHTML = "Hola, esta clase esta chistosa y no entiendo aun";
+    }
+    )
+}
+
+function ChangeTitle()
+{
+    $(document).ready(function()
+    {
+        document.getElementById("2"). innerHTML = "Ya valimos amigos";
+    }
+    )
+}
+
+var Var = false;
+function Console()
+{
+    Var = !Var;
+    console.log("Var = " +Var);
+
+}
+
+function myFunction()
+{
+    if(Var == false)
+    {
+        alert(Mirenmeeee);
+        Var=true;
+    }
+    else{
+        
+    }
+}
+
+</script>
+
+
+</body>
+
+
+</html>
